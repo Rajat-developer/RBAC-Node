@@ -11,8 +11,8 @@ dbconnect();
 app.use(express.json());
 
 //Routes
-app.use("/api/auth",authRoutes);
-app.use("/api/users",userRoutes);
+app.use("/api/auth",authRoutes);  // common route for login and register
+app.use("/api/users",userRoutes); // common route for admin, user, manager
 
 // Start the server
  const PORT= process.env.PORT || 5000
